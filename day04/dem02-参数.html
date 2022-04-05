@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 运用传参的方式：计算两个数的和
+        function getSum(num1, num2) {
+            let sum = num1 + num2;
+            console.log(sum);
+        }
+        getSum(10,20);
+        // 运用传参的方式：计算1-100的和:
+        function getAnd(end) {
+            let sum = 0;
+            for(let i = 1; i <= end; i++) {
+                sum += i;
+            }
+            console.log(sum)
+        }
+        getAnd(100);
+        // 要求用户可以传递求和的起始值和结束值
+        function getAnd2(start,end) {
+            let sum = 0;
+            for(let i = start; i <= end; i++) {
+                sum += i;
+            }
+            console.log(sum)
+        }
+        getAnd2(1,100);
+    </script>
+</body>
+</html>

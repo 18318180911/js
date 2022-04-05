@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let goods = {
+            name: '小米手机',
+            num: '6666',
+            weight: '0.55kg',
+            address: '中国大陆',
+
+            // 方法
+            phone: function() {
+                console.log('可以打电话');
+            }
+        }
+        // 打印数据类型
+        console.log(typeof goods);
+        // 打印数据
+        console.log(goods);
+        // 访问属性
+        console.log(goods.name);
+        // console.log(goods['num']);
+        // document.write(`商品的名称是:${goods['name']}<br/>商品的型号是:${goods['num']}<br/>商品的重量是:${goods['weight']}`)
+        // 使用[]，不使用''时，会被当成变量，需要定义变量, 若不定义会报错；        
+        let num = 'weight';
+        let num1 = '666';
+        // console.log(goods.num1);
+        console.log(goods[num]);
+        // 当访问不存在的属性，会返回undefined
+        // console.log(goods.age);
+        // 调用函数
+        goods['phone']();
+        // 新增方法
+        let person = {};
+         person.sayHi = function () {
+             document.write('你好')
+         };
+         person.sayHi()
+        // 删除对象中的方法
+        // delete goods.phone;
+        // console.log(goods);
+
+        // 遍历对象
+        // for (let s in goods) {
+        //     console.log(s); // 打印属性名
+        //     // console.log(goods[s]); // 打印属性值
+        // }
+    </script>
+</body>
+</html>

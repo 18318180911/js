@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.用户输入秒数，可以自动转换为小时分钟秒数
+        // 2.定义一个函数，根据用户传入的秒数计算出对应的时分秒，并返回
+        // 函数封装， num表示秒数
+        function change(num) {
+            // 转换为小时
+            let h = parseInt(num / 3600 % 24);
+                h = h > 10 ? h : '0' + h;
+            // console.log(`${h1}小时`);
+            // 转换为分钟
+            let m = parseInt(num / 60 % 60);
+                m = m > 10 ? m : '0' + m ;
+            // console.log(`${m1}分钟`);
+            // 秒数
+            let s = parseInt(num % 60);
+                s = s > 10 ? s : '0' + s ;
+            // console.log(`${s}秒`);
+            // 返回时分秒
+            return[h, m, s];
+        }
+        // 调用函数
+        // change(3600);
+        // 定义变量接收用户输入的秒数
+        let num1 = +prompt('请输入秒数');
+        // 调用函数，获取小时分钟和秒数，进行输出
+        let arr = change(num1);
+        console.log(`${arr[0]}小时${arr[1]}分钟${arr[2]}秒`);
+        document.write(`${arr[0]}:${arr[1]}:${arr[2]}`)
+    </script>
+</body>
+</html>

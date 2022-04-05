@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 第一科成绩
+        let fraction1 = +prompt('总分是100分:请输入第一科成绩');
+        // 第二科成绩
+        let fraction2 = +prompt('总分是100分:请输入第二科成绩');
+        // 总分
+        let score = fraction1 + fraction2;
+        // 总分：是200
+        if(score >=0 && score <= 200) {
+            if (score >= 190 && score <= 200) {
+                alert('优秀');
+            } else if (score >= 180 && score < 190) {
+                alert('良好');
+            } else if (score >= 170 && score < 180) {
+                alert('及格');
+            } else{
+                alert('重读');
+            }
+        } else {
+            alert('请不要超过200分');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.第一个需求
+        // 行数
+        // for (let row = 0; row < 5; row++) {
+        //     document.write('☆');
+        //     // 列数
+        //     for (let col = 1; col < 5; col++) {
+        //         document.write('☆');
+        //     }
+        //     document.write('<br>');
+        // }
+        // 第二个需求:
+        // let a = +prompt('请输入想打印的星星行数');
+        // let b = +prompt('请输入想打印的星星列数');
+        // for (let row = 0; row < a; row++) {
+        //     document.write('☆');
+        //     // 列数
+        //     for (let col = 1; col < b; col++) {
+        //         document.write('☆');
+        //     }
+        //     document.write('<br>');
+        // }
+        // 3.
+        let a = +prompt('请输入行数');
+        for (let row = 1; row <= a; row++) {
+            document.write('☆');
+            // 列数
+            for (let col = 1; col < row; col++) {
+                document.write('☆');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>

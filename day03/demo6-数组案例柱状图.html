@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            display: flex;
+            height: 300px;
+            width: 500px;
+            margin: 100px auto;
+            border-left: 1px solid pink;
+            border-bottom: 1px solid pink;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            text-align: center;
+        }
+        .box > div {
+            display: flex;
+            width: 30px;
+            background-color: pink;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .box div p {
+            font-size: 12px;
+            margin-top: -20px;
+        }
+        .box div h6 {
+            width: 50px;
+            margin-bottom: -25px;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    
+        <!-- <div style="height: 100px">
+            <p>数据</p>
+            <h6>第1季度</h6>
+        </div>
+        <div style="height: 200px">
+            <p>数据</p>
+            <h6>第1季度</h6>
+        </div>
+        <div style="height: 300px">
+            <p>数据</p>
+            <h6>第1季度</h6>
+        </div>
+        <div style="height: 400px">
+            <p>数据</p>
+            <h6>第1季度</h6>
+        </div>
+    </div> -->
+    <script>
+        // let quarter = +prompt('请输入1-4的季度');
+        // let num = +prompt('请输入数值');
+        // 一共有四个数据，使用数组存储
+        let arr = [];
+        // 一个有四个值需要输入，使用for循环
+        for (let i = 0; i < 4; i++) {
+            // 若索引不在，就是添加且会修改数组的长度
+            arr[i] = +prompt(`请输入第${i + 1}个季度的值`);
+        }
+        let htmlStr = '<div class="box">'
+            // 根据数据生成四个柱子，遍历数组
+        for (let i = 0; i < arr.length; i++) {
+            // 根据数据生成柱形图
+            htmlStr += `<div style="height: ${arr[i]}px;">
+            <p>${arr[i]}</p>
+            <h6>第${i + 1}季度</h6>
+        </div>`
+        }
+        htmlStr += '</div>';
+        console.log(htmlStr);
+        document.write(htmlStr);
+    </script>
+</body>
+</html>

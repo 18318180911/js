@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        ul{
+          list-style: none;
+          width: 600px;
+          height: 300px;
+          margin: 100px auto;
+          display: flex;
+          justify-content: space-around;
+          border-left: 1px solid pink;
+          border-bottom: 1px solid pink;
+          /* background-color: aqua; */
+  
+          /* 设置侧轴的对齐方式 下对齐 */
+          align-items: flex-end;
+        }
+        li{
+          width: 50px;
+          background-color: pink;
+          position: relative;
+        }
+        span{
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        div{
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          /* 相对于父元素的高 */
+          top:100%;
+          font-size: 12x;
+          /* background-color: red; */
+        }
+        /* li:nth-child(1){
+          height: 100px;
+        }
+        li:nth-child(2){
+          height: 200px;
+        }
+        li:nth-child(3){
+          height: 300px;
+        }
+        li:nth-child(4){
+          height: 400px;
+        } */
+      </style>
+</head>
+<body>
+    <!-- <ul>
+        <li><span>1</span><div>第1季度</div></li>
+        <li><span>2</span><div>第2季度</div></li>
+        <li><span>3</span><div>第3季度</div></li>
+        <li><span>4</span><div>第4季度</div></li>
+    </ul> -->
+    <script>
+        // let num = +prompt('请输入你想要生成的li个数');
+        let liHtml = `<ul>`;
+        let liHeight = [];
+        for (let i = 0; i < 4; i++) {
+            let height = +prompt(`请输入你想要的第${i + 1}个高度数据`);
+            liHeight.push(height);
+            
+        }
+        for (let i = 0; i < 4; i++) {
+            liHtml += `
+            <li style="height: ${liHeight[i]}px;">
+                <span>${liHeight[i]}</span>
+                <div>第${i + 1}季度</div>
+            </li>`;
+        }
+        liHtml += `</ul>`;
+        document.write(liHtml);
+    </script>
+</body>
+</html>

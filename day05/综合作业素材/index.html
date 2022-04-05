@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no"
+    />
+    <title>index.html</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 来引入外部的js -->
+    <script src="./data/data.js"></script>
+    
+    <script>
+      // console.log(data);// 8 
+      
+      
+      
+      // 定义变量 用来最终显示 标签
+      // 开头
+      let html = `
+      <div class="box w">
+  <div class="box-hd">
+    <h3>精品推荐</h3>
+    <a href="#">查看全部</a>
+  </div>
+  <div class="box-bd">
+    <ul class="clearfix">
+      `;
+
+      // 中间需要遍历
+      for (let index = 0; index < data.length; index++) {
+        // 在循环li标签的时候  可以动态传入对应图片和文字内容！ 
+        html += `
+        <li>
+        <img src="${data[index].src}" alt="" />
+        <h4>
+          ${data[index].title}
+        </h4>
+        <div class="info">
+          <span>高级</span> • <span>${data[index].num}</span>人在学习
+        </div>
+      </li>
+        `;
+      }
+
+      // 结尾
+      html += `
+    </ul>
+  </div>
+</div>
+      `;
+
+      // 把拼接好的html 显示到网页中
+      document.write(html);
+    </script>
+  </body>
+</html>

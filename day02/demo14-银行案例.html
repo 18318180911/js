@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let total = 100;
+        let choice;
+            while(choice !== '4') {
+                let choice = prompt(`请选择您的操作：
+                    1.存钱
+                    2.取钱
+                    3.查看余额
+                    4.退出`);
+                if (choice == '1') {
+                    // 让用户输入取款金额
+                    let drawMoney = +prompt('请输入存款金额：');
+                    total += drawMoney;
+                    alert('存款成功');
+                } else if (choice == '2') {
+                    // 让用户输入存款金额
+                    let deposit = prompt('请输入取款金额：');
+                    // 不能让用户取钱时超出总金额
+                    if (deposit <= total) {
+                        total -= deposit;
+                        alert('取款成功');
+                    } else {
+                        alert('余额不足');
+                    }
+                } else if (choice == '3') {
+                    alert('您的账户余额为：'+total);
+                } else if(choice == '4') {
+                    alert('退出');
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #000;
+           
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // let sum = 0;
+        // for (let i = 1; i <= 9; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         sum = i * j;
+        //         document.write(i + 'x' + j +'=' +sum +' &nbsp; &nbsp;');
+        //     }
+        //     document.write('<br>');
+        // }
+        document.write('<table>');
+
+        for (let i = 1; i <= 9; i++) {
+            document.write('<tr>');
+            for (let j = 1; j <= i; j++) {
+                document.write('<td>');
+                document.write(`${j} * ${i} = ${j * i} &nbsp; &nbsp;`);
+                document.write('</td>');
+            }
+            document.write('</tr>');
+            document.write('<br>');
+        } 
+        document.write('</table>');
+    </script>
+</body>
+</html>

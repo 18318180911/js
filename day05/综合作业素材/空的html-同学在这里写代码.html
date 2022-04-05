@@ -1,0 +1,43 @@
+<!-- 
+  1 引入style.css
+  2 引入 data.js
+  3 根据data.js中的data数组 来遍历生成代码 
+    最终让网页显示出来 data数组的数据
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+ </head>
+ <body>
+   <script src="./data/data.js"></script>
+   <script>
+     let htmlStr = `<div class="box w">
+                      <div class="box-hd">
+                        <h3>精品推荐</h3>
+                        <a href="#">查看全部</a>
+                      </div>
+                      <div class="box-bd">
+                        <ul class="clearfix">`
+                          for (let i = 0; i < data.length; i++) {
+                            htmlStr += `<li>
+                                          <img src="${data[i].src}" alt="" />
+                                          <h4>
+                                            ${data[i].title}
+                                          </h4>
+                                          <div class="info">
+                                            ${data[i].num}
+                                          </div>
+                                        </li>`
+                          }
+        htmlStr += `</ul>
+                </div>
+              </div>`
+              document.write(htmlStr)
+   </script>
+ </body>
+ </html>

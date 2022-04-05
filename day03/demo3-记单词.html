@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 天数
+        // for (let i = 0; i < 3; i++) {
+        //     document.write(`第${i + 1}天 <br>`);
+        //     // 单词数量
+        //     for (let j = 0; j < 5; j++) {
+        //         document.write(`记住第${j + 1}个单词 <br>`);
+        //     }
+        // }
+
+        // 2.用户输入天数
+        let day = +prompt('请输入天数')
+        // 用户输入单词数量
+        let many = +prompt('请输入单词数量')
+        for (let i = 0; i < day; i++) {
+            document.write(`第${i + 1}天 <br>`);
+            // 单词数量
+            for (let j = 0; j < many; j++) {
+                document.write(`记住第${j + 1}个单词 <br>`);
+            }
+        }
+    </script>
+</body>
+</html>

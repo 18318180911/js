@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 短路运算：
+        // &&：如果第一个表达式为假时，直接返回false，
+        // 如果第一个为真时，才会执行第一个为真，才会执行的第二个，返回第二个的值
+        let num = 3 > 4 && 5 //flase
+        let num1 = 4 > 3 && 9 // 9
+        console.log(num);
+        console.log(num1);
+        let num5 = 2;
+        let num6 = num5 > 1 && num5++
+        console.log(num6);
+        // 当第一个值为真时，num5++才会执行第二次,若是为假时，num5不会执行第二次
+        console.log(num5); // 6
+        // ||：如果第一个为真，就返回第一个值，如果第一个表达式为假，才会执行第二个表达式，返回第二个的值，
+        //     如果第二个也为假，才会执行第三个，如果没有第三个时，就为false
+        let num2 = 4 > 3 || 5
+        let num3 = 3 > 4 || 5
+        let num4 = 3 > 4 || 4 > 5 || 8
+        console.log(num2); 
+        console.log(num3);
+        console.log(num4)
+        num7 = 1
+        let num8 = num7 > 3 || num7++
+        console.log(num8);
+        // 当第一个值为假时，num7++才会执行第二次,若是为真时，num7不会执行第二次
+        console.log(num7);
+        let a = 10
+        let b = a > 9 && console.log('123'); // 123
+        console.log(b); // undefined
+        console.log(a); // 10
+        let c = 10;
+        let d = 4 < 3 && ++a;
+        console.log(d);
+        console.log(c)
+    </script>
+</body>
+</html>

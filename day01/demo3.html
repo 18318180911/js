@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid #000;
+            width: 800px;
+            margin: 100px auto;
+            /* 盒子边框合并 */
+            border-collapse: collapse;
+        }
+        table > caption {
+            font-weight: 700;
+            padding: 5px;
+        }
+        table td,
+        th {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 10px 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // 定义三个变量接收用户输入的信息
+        let tradeName = prompt('请输入商品名称'),
+        tradePrice = prompt('请输入商品价格'),
+        tradeCount = prompt('请输入商品数量'),
+        address = prompt('请输入收货地址')
+        // 根据数据生成对应的表格结构
+        let html = `<table>
+        <caption>订单付款确认界面</caption>
+        <tr>
+            <th>商品订单</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>总价</th>
+            <th>收货地址</th>
+        </tr>
+        <tr>
+            <td>${tradeName}</td>
+            <td>${tradePrice}</td>
+            <td>${tradeCount}</td>
+            <td>${tradePrice * tradeCount}</td>
+            <td>${address}</td>
+        </tr>
+    </table>`
+    // 将生成的结构打印在页面中
+    document.write(html);
+    </script>
+</body>
+</html>

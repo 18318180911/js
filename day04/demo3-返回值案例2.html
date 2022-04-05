@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 求任意数组中的最小值返回这个最小值
+        function getMin(arr) {
+            //默认第一个最小
+            let min = arr[0];
+            // 遍历数组，从第二个开始与min比较到最后一个元素，即下标为arr.length-1,判断时用 < arr.length即可
+            for (let i = 1; i < arr.length; i++) {
+                // 判断最小值
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+            }
+            // 返回最小值
+            return min;
+        }
+        let min = getMin([2, 44, 53, 12, 1]);
+        console.log(min);
+    </script>
+</body>
+</html>

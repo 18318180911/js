@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function num(a,b) {
+            console.log(parseInt(Math.random()*(b - a + 1)) + a);
+        }
+        // num(0,11);
+        // num(0,6);
+        let names = ['赵云', '小鲁班', '关羽', '张飞', '马超', '王昭君', '曹操'];
+        console.log(names[num(0, names.length - 1)]);
+    </script>
+</body>
+</html>

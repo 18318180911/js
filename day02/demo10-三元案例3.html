@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = +prompt('请输入第一个数字');
+        let num2 = +prompt('请输入第二个数字');
+        let sign = prompt('请输入一个符号');
+        let result;
+        if (sign === '+') {
+            alert(`你选择的是加法，结果是：${result = num1 + num2}`);
+        } else if (sign === '-') {
+            alert(`你选择的是减法，结果是：${result = num1 - num2}`);
+        } else if (sign === '*') {
+            alert(`你选择的是乘法，结果是：${result = num1 * num2}`);
+        }else if (sign === '/'){
+            if (num2 == 0) {
+                alert('被除数不能是0');
+            }
+            alert(`你选择的是除法，结果是：${result = num1 / num2}`);
+        }else {
+            alert('不存在该符号')
+        }
+    </script>
+</body>
+</html>
